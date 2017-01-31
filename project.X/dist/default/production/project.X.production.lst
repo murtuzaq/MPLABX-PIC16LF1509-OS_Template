@@ -1,0 +1,1856 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.38 build -256452561 
+                                                                                               Tue Jan 31 12:40:44 2017
+
+Microchip Technology Omniscient Code Generator v1.38 (Free mode) build 201607010351
+     1                           	processor	16F1509
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
+     5                           	psect	nvCOMMON,global,class=COMMON,space=1,delta=1
+     6                           	psect	stringtext,global,class=STRCODE,delta=2
+     7                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     8                           	psect	bssCOMMON,global,class=COMMON,space=1,delta=1
+     9                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
+    10                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+    11                           	psect	clrtext,global,class=CODE,delta=2
+    12                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    13                           	psect	maintext,global,class=CODE,merge=1,split=1,delta=2
+    14                           	psect	text1,local,class=CODE,merge=1,delta=2
+    15                           	psect	text2,local,class=CODE,merge=1,delta=2
+    16                           	psect	text3,local,class=CODE,merge=1,delta=2
+    17                           	psect	text4,local,class=CODE,merge=1,delta=2
+    18                           	psect	text5,local,class=CODE,merge=1,delta=2
+    19                           	psect	text6,local,class=CODE,merge=1,delta=2
+    20                           	psect	text7,local,class=CODE,merge=1,delta=2
+    21                           	psect	text8,local,class=CODE,merge=1,delta=2
+    22                           	psect	text9,local,class=CODE,merge=1,delta=2
+    23                           	dabs	1,0x7E,2
+    24  0000                     	;# 
+    25  0001                     	;# 
+    26  0002                     	;# 
+    27  0003                     	;# 
+    28  0004                     	;# 
+    29  0005                     	;# 
+    30  0006                     	;# 
+    31  0007                     	;# 
+    32  0008                     	;# 
+    33  0009                     	;# 
+    34  000A                     	;# 
+    35  000B                     	;# 
+    36  000C                     	;# 
+    37  000D                     	;# 
+    38  000E                     	;# 
+    39  0011                     	;# 
+    40  0012                     	;# 
+    41  0013                     	;# 
+    42  0015                     	;# 
+    43  0016                     	;# 
+    44  0016                     	;# 
+    45  0017                     	;# 
+    46  0018                     	;# 
+    47  0019                     	;# 
+    48  001A                     	;# 
+    49  001B                     	;# 
+    50  001C                     	;# 
+    51  008C                     	;# 
+    52  008D                     	;# 
+    53  008E                     	;# 
+    54  0091                     	;# 
+    55  0092                     	;# 
+    56  0093                     	;# 
+    57  0095                     	;# 
+    58  0096                     	;# 
+    59  0097                     	;# 
+    60  0099                     	;# 
+    61  009A                     	;# 
+    62  009B                     	;# 
+    63  009B                     	;# 
+    64  009C                     	;# 
+    65  009D                     	;# 
+    66  009E                     	;# 
+    67  009F                     	;# 
+    68  010C                     	;# 
+    69  010D                     	;# 
+    70  010E                     	;# 
+    71  0111                     	;# 
+    72  0112                     	;# 
+    73  0113                     	;# 
+    74  0114                     	;# 
+    75  0115                     	;# 
+    76  0116                     	;# 
+    77  0117                     	;# 
+    78  0118                     	;# 
+    79  0119                     	;# 
+    80  011D                     	;# 
+    81  018C                     	;# 
+    82  018D                     	;# 
+    83  018E                     	;# 
+    84  0191                     	;# 
+    85  0191                     	;# 
+    86  0192                     	;# 
+    87  0193                     	;# 
+    88  0193                     	;# 
+    89  0194                     	;# 
+    90  0195                     	;# 
+    91  0196                     	;# 
+    92  0197                     	;# 
+    93  0199                     	;# 
+    94  019A                     	;# 
+    95  019B                     	;# 
+    96  019B                     	;# 
+    97  019C                     	;# 
+    98  019D                     	;# 
+    99  019E                     	;# 
+   100  019F                     	;# 
+   101  020C                     	;# 
+   102  020D                     	;# 
+   103  0211                     	;# 
+   104  0211                     	;# 
+   105  0212                     	;# 
+   106  0212                     	;# 
+   107  0213                     	;# 
+   108  0213                     	;# 
+   109  0214                     	;# 
+   110  0214                     	;# 
+   111  0215                     	;# 
+   112  0215                     	;# 
+   113  0215                     	;# 
+   114  0216                     	;# 
+   115  0216                     	;# 
+   116  0217                     	;# 
+   117  0217                     	;# 
+   118  0391                     	;# 
+   119  0392                     	;# 
+   120  0393                     	;# 
+   121  0394                     	;# 
+   122  0395                     	;# 
+   123  0396                     	;# 
+   124  0498                     	;# 
+   125  0498                     	;# 
+   126  0499                     	;# 
+   127  049A                     	;# 
+   128  049B                     	;# 
+   129  049B                     	;# 
+   130  049C                     	;# 
+   131  049D                     	;# 
+   132  049E                     	;# 
+   133  049F                     	;# 
+   134  0611                     	;# 
+   135  0612                     	;# 
+   136  0613                     	;# 
+   137  0613                     	;# 
+   138  0614                     	;# 
+   139  0615                     	;# 
+   140  0616                     	;# 
+   141  0616                     	;# 
+   142  0617                     	;# 
+   143  0618                     	;# 
+   144  0619                     	;# 
+   145  0619                     	;# 
+   146  061A                     	;# 
+   147  061B                     	;# 
+   148  061C                     	;# 
+   149  061C                     	;# 
+   150  0691                     	;# 
+   151  0692                     	;# 
+   152  0693                     	;# 
+   153  0694                     	;# 
+   154  0695                     	;# 
+   155  0F0F                     	;# 
+   156  0F10                     	;# 
+   157  0F11                     	;# 
+   158  0F12                     	;# 
+   159  0F13                     	;# 
+   160  0F14                     	;# 
+   161  0F15                     	;# 
+   162  0F16                     	;# 
+   163  0F17                     	;# 
+   164  0F18                     	;# 
+   165  0F19                     	;# 
+   166  0F1A                     	;# 
+   167  0F1B                     	;# 
+   168  0F1C                     	;# 
+   169  0F1D                     	;# 
+   170  0F1E                     	;# 
+   171  0F1F                     	;# 
+   172  0F20                     	;# 
+   173  0F21                     	;# 
+   174  0F22                     	;# 
+   175  0F23                     	;# 
+   176  0F24                     	;# 
+   177  0F25                     	;# 
+   178  0F26                     	;# 
+   179  0F27                     	;# 
+   180  0F28                     	;# 
+   181  0F29                     	;# 
+   182  0F2A                     	;# 
+   183  0F2B                     	;# 
+   184  0F2C                     	;# 
+   185  0F2D                     	;# 
+   186  0F2E                     	;# 
+   187  0F2F                     	;# 
+   188  0F8C                     	;# 
+   189  0F8D                     	;# 
+   190  0F91                     	;# 
+   191  0F95                     	;# 
+   192  0F96                     	;# 
+   193  0F97                     	;# 
+   194  0F9C                     	;# 
+   195  0F9D                     	;# 
+   196  0F9E                     	;# 
+   197  0FE3                     	;# 
+   198  0FE4                     	;# 
+   199  0FE5                     	;# 
+   200  0FE6                     	;# 
+   201  0FE7                     	;# 
+   202  0FE8                     	;# 
+   203  0FE9                     	;# 
+   204  0FEA                     	;# 
+   205  0FEB                     	;# 
+   206  0FED                     	;# 
+   207  0FEE                     	;# 
+   208  0FEF                     	;# 
+   209  0000                     	;# 
+   210  0001                     	;# 
+   211  0002                     	;# 
+   212  0003                     	;# 
+   213  0004                     	;# 
+   214  0005                     	;# 
+   215  0006                     	;# 
+   216  0007                     	;# 
+   217  0008                     	;# 
+   218  0009                     	;# 
+   219  000A                     	;# 
+   220  000B                     	;# 
+   221  000C                     	;# 
+   222  000D                     	;# 
+   223  000E                     	;# 
+   224  0011                     	;# 
+   225  0012                     	;# 
+   226  0013                     	;# 
+   227  0015                     	;# 
+   228  0016                     	;# 
+   229  0016                     	;# 
+   230  0017                     	;# 
+   231  0018                     	;# 
+   232  0019                     	;# 
+   233  001A                     	;# 
+   234  001B                     	;# 
+   235  001C                     	;# 
+   236  008C                     	;# 
+   237  008D                     	;# 
+   238  008E                     	;# 
+   239  0091                     	;# 
+   240  0092                     	;# 
+   241  0093                     	;# 
+   242  0095                     	;# 
+   243  0096                     	;# 
+   244  0097                     	;# 
+   245  0099                     	;# 
+   246  009A                     	;# 
+   247  009B                     	;# 
+   248  009B                     	;# 
+   249  009C                     	;# 
+   250  009D                     	;# 
+   251  009E                     	;# 
+   252  009F                     	;# 
+   253  010C                     	;# 
+   254  010D                     	;# 
+   255  010E                     	;# 
+   256  0111                     	;# 
+   257  0112                     	;# 
+   258  0113                     	;# 
+   259  0114                     	;# 
+   260  0115                     	;# 
+   261  0116                     	;# 
+   262  0117                     	;# 
+   263  0118                     	;# 
+   264  0119                     	;# 
+   265  011D                     	;# 
+   266  018C                     	;# 
+   267  018D                     	;# 
+   268  018E                     	;# 
+   269  0191                     	;# 
+   270  0191                     	;# 
+   271  0192                     	;# 
+   272  0193                     	;# 
+   273  0193                     	;# 
+   274  0194                     	;# 
+   275  0195                     	;# 
+   276  0196                     	;# 
+   277  0197                     	;# 
+   278  0199                     	;# 
+   279  019A                     	;# 
+   280  019B                     	;# 
+   281  019B                     	;# 
+   282  019C                     	;# 
+   283  019D                     	;# 
+   284  019E                     	;# 
+   285  019F                     	;# 
+   286  020C                     	;# 
+   287  020D                     	;# 
+   288  0211                     	;# 
+   289  0211                     	;# 
+   290  0212                     	;# 
+   291  0212                     	;# 
+   292  0213                     	;# 
+   293  0213                     	;# 
+   294  0214                     	;# 
+   295  0214                     	;# 
+   296  0215                     	;# 
+   297  0215                     	;# 
+   298  0215                     	;# 
+   299  0216                     	;# 
+   300  0216                     	;# 
+   301  0217                     	;# 
+   302  0217                     	;# 
+   303  0391                     	;# 
+   304  0392                     	;# 
+   305  0393                     	;# 
+   306  0394                     	;# 
+   307  0395                     	;# 
+   308  0396                     	;# 
+   309  0498                     	;# 
+   310  0498                     	;# 
+   311  0499                     	;# 
+   312  049A                     	;# 
+   313  049B                     	;# 
+   314  049B                     	;# 
+   315  049C                     	;# 
+   316  049D                     	;# 
+   317  049E                     	;# 
+   318  049F                     	;# 
+   319  0611                     	;# 
+   320  0612                     	;# 
+   321  0613                     	;# 
+   322  0613                     	;# 
+   323  0614                     	;# 
+   324  0615                     	;# 
+   325  0616                     	;# 
+   326  0616                     	;# 
+   327  0617                     	;# 
+   328  0618                     	;# 
+   329  0619                     	;# 
+   330  0619                     	;# 
+   331  061A                     	;# 
+   332  061B                     	;# 
+   333  061C                     	;# 
+   334  061C                     	;# 
+   335  0691                     	;# 
+   336  0692                     	;# 
+   337  0693                     	;# 
+   338  0694                     	;# 
+   339  0695                     	;# 
+   340  0F0F                     	;# 
+   341  0F10                     	;# 
+   342  0F11                     	;# 
+   343  0F12                     	;# 
+   344  0F13                     	;# 
+   345  0F14                     	;# 
+   346  0F15                     	;# 
+   347  0F16                     	;# 
+   348  0F17                     	;# 
+   349  0F18                     	;# 
+   350  0F19                     	;# 
+   351  0F1A                     	;# 
+   352  0F1B                     	;# 
+   353  0F1C                     	;# 
+   354  0F1D                     	;# 
+   355  0F1E                     	;# 
+   356  0F1F                     	;# 
+   357  0F20                     	;# 
+   358  0F21                     	;# 
+   359  0F22                     	;# 
+   360  0F23                     	;# 
+   361  0F24                     	;# 
+   362  0F25                     	;# 
+   363  0F26                     	;# 
+   364  0F27                     	;# 
+   365  0F28                     	;# 
+   366  0F29                     	;# 
+   367  0F2A                     	;# 
+   368  0F2B                     	;# 
+   369  0F2C                     	;# 
+   370  0F2D                     	;# 
+   371  0F2E                     	;# 
+   372  0F2F                     	;# 
+   373  0F8C                     	;# 
+   374  0F8D                     	;# 
+   375  0F91                     	;# 
+   376  0F95                     	;# 
+   377  0F96                     	;# 
+   378  0F97                     	;# 
+   379  0F9C                     	;# 
+   380  0F9D                     	;# 
+   381  0F9E                     	;# 
+   382  0FE3                     	;# 
+   383  0FE4                     	;# 
+   384  0FE5                     	;# 
+   385  0FE6                     	;# 
+   386  0FE7                     	;# 
+   387  0FE8                     	;# 
+   388  0FE9                     	;# 
+   389  0FEA                     	;# 
+   390  0FEB                     	;# 
+   391  0FED                     	;# 
+   392  0FEE                     	;# 
+   393  0FEF                     	;# 
+   394                           
+   395                           	psect	idataBANK0
+   396  06C7                     __pidataBANK0:	
+   397                           
+   398                           ;initializer for _Version
+   399  06C7  3400               	retlw	low (STR_1| (0+32768))
+   400  06C8  3488               	retlw	high (STR_1| (0+32768))
+   401                           
+   402                           	psect	nvCOMMON
+   403  007D                     __pnvCOMMON:	
+   404  007D                     _RunPt:	
+   405  007D                     	ds	1
+   406                           
+   407                           	psect	stringtext
+   408  0800                     __pstringtext:	
+   409  0800                     STR_1:	
+   410  0800  3446               	retlw	70	;'F'
+   411  0801  3469               	retlw	105	;'i'
+   412  0802  3472               	retlw	114	;'r'
+   413  0803  346D               	retlw	109	;'m'
+   414  0804  3477               	retlw	119	;'w'
+   415  0805  3461               	retlw	97	;'a'
+   416  0806  3472               	retlw	114	;'r'
+   417  0807  3465               	retlw	101	;'e'
+   418  0808  3420               	retlw	32	;' '
+   419  0809  3456               	retlw	86	;'V'
+   420  080A  3465               	retlw	101	;'e'
+   421  080B  3472               	retlw	114	;'r'
+   422  080C  3473               	retlw	115	;'s'
+   423  080D  3469               	retlw	105	;'i'
+   424  080E  346F               	retlw	111	;'o'
+   425  080F  346E               	retlw	110	;'n'
+   426  0810  3420               	retlw	32	;' '
+   427  0811  3430               	retlw	48	;'0'
+   428  0812  342E               	retlw	46	;'.'
+   429  0813  3430               	retlw	48	;'0'
+   430  0814  342E               	retlw	46	;'.'
+   431  0815  3431               	retlw	49	;'1'
+   432  0816  3400               	retlw	0
+   433                           
+   434                           	psect	cinit
+   435  07EA                     start_initialization:	
+   436                           ; #config settings
+   437                           
+   438  07EA                     __initialization:	
+   439                           
+   440                           ; Initialize objects allocated to BANK0
+   441  07EA  3186  26C7  3187   	fcall	__pidataBANK0	;fetch initializer
+   442  07ED  00B8               	movwf	__pdataBANK0& (0+127)
+   443  07EE  3186  26C8  3187   	fcall	__pidataBANK0+1	;fetch initializer
+   444  07F1  00B9               	movwf	(__pdataBANK0+1)& (0+127)
+   445                           
+   446                           ; Clear objects allocated to COMMON
+   447  07F2  01F9               	clrf	__pbssCOMMON& (0+127)
+   448  07F3  01FA               	clrf	(__pbssCOMMON+1)& (0+127)
+   449  07F4  01FB               	clrf	(__pbssCOMMON+2)& (0+127)
+   450  07F5  01FC               	clrf	(__pbssCOMMON+3)& (0+127)
+   451                           
+   452                           ; Clear objects allocated to BANK0
+   453  07F6  3020               	movlw	low __pbssBANK0
+   454  07F7  0084               	movwf	4
+   455  07F8  3000               	movlw	high __pbssBANK0
+   456  07F9  0085               	movwf	5
+   457  07FA  3018               	movlw	24
+   458  07FB  3186  26C9         	fcall	clear_ram0
+   459  07FD                     end_of_initialization:	
+   460                           ;End of C runtime variable initialization code
+   461                           
+   462  07FD                     __end_of__initialization:	
+   463  07FD  0020               	movlb	0
+   464  07FE  3186  2EF8         	ljmp	_main	;jump to C main() function
+   465                           
+   466                           	psect	bssCOMMON
+   467  0079                     __pbssCOMMON:	
+   468  0079                     _sema4:	
+   469  0079                     	ds	1
+   470  007A                     _sema1:	
+   471  007A                     	ds	1
+   472  007B                     _sema2:	
+   473  007B                     	ds	1
+   474  007C                     _sema3:	
+   475  007C                     	ds	1
+   476                           
+   477                           	psect	bssBANK0
+   478  0020                     __pbssBANK0:	
+   479  0020                     _i:	
+   480  0020                     	ds	2
+   481  0022                     _j:	
+   482  0022                     	ds	2
+   483  0024                     _k:	
+   484  0024                     	ds	2
+   485  0026                     _l:	
+   486  0026                     	ds	2
+   487  0028                     _tcbs:	
+   488  0028                     	ds	16
+   489                           
+   490                           	psect	dataBANK0
+   491  0038                     __pdataBANK0:	
+   492  0038                     _Version:	
+   493  0038                     	ds	2
+   494                           
+   495                           	psect	clrtext
+   496  06C9                     clear_ram0:	
+   497                           ;	Called with FSR0 containing the base address, and
+   498                           ;	WREG with the size to clear
+   499                           
+   500  06C9  0064               	clrwdt	;clear the watchdog before getting into this loop
+   501  06CA                     clrloop0:	
+   502  06CA  0180               	clrf	0	;clear RAM location pointed to by FSR
+   503  06CB  3101               	addfsr 0,1
+   504  06CC  0B89               	decfsz	9,f	;Have we reached the end of clearing yet?
+   505  06CD  2ECA               	goto	clrloop0	;have we reached the end yet?
+   506  06CE  3400               	retlw	0	;all done for this memory range, return
+   507                           
+   508                           	psect	cstackCOMMON
+   509  0070                     __pcstackCOMMON:	
+   510  0070                     ?_OS_AddThreads:	
+   511  0070                     ?_task1:	
+   512                           ; 1 bytes @ 0x0
+   513                           
+   514  0070                     ?_task2:	
+   515                           ; 1 bytes @ 0x0
+   516                           
+   517  0070                     ?_task3:	
+   518                           ; 1 bytes @ 0x0
+   519                           
+   520  0070                     ?_task4:	
+   521                           ; 1 bytes @ 0x0
+   522                           
+   523  0070                     ?_OS_Launch:	
+   524                           ; 1 bytes @ 0x0
+   525                           
+   526  0070                     ?_OS_Scheduler:	
+   527                           ; 1 bytes @ 0x0
+   528                           
+   529  0070                     ?_OS_Signal:	
+   530                           ; 1 bytes @ 0x0
+   531                           
+   532  0070                     ??_OS_Signal:	
+   533                           ; 1 bytes @ 0x0
+   534                           
+   535  0070                     ?_OS_Wait:	
+   536                           ; 1 bytes @ 0x0
+   537                           
+   538  0070                     ??_OS_Wait:	
+   539                           ; 1 bytes @ 0x0
+   540                           
+   541  0070                     ?_main:	
+   542                           ; 1 bytes @ 0x0
+   543                           
+   544  0070                     OS_Signal@wBlocked:	
+   545                           ; 1 bytes @ 0x0
+   546                           
+   547  0070                     OS_AddThreads@func1:	
+   548                           ; 1 bytes @ 0x0
+   549                           
+   550                           
+   551                           ; 2 bytes @ 0x0
+   552  0070                     	ds	1
+   553  0071                     OS_Wait@ret:	
+   554  0071                     OS_Signal@semaPt:	
+   555                           ; 1 bytes @ 0x1
+   556                           
+   557                           
+   558                           ; 1 bytes @ 0x1
+   559  0071                     	ds	1
+   560  0072                     OS_Wait@semaPt:	
+   561  0072                     OS_Signal@pt:	
+   562                           ; 1 bytes @ 0x2
+   563                           
+   564  0072                     OS_AddThreads@func2:	
+   565                           ; 1 bytes @ 0x2
+   566                           
+   567                           
+   568                           ; 2 bytes @ 0x2
+   569  0072                     	ds	1
+   570  0073                     ??_task1:	
+   571  0073                     ??_task2:	
+   572                           ; 1 bytes @ 0x3
+   573                           
+   574  0073                     ??_task3:	
+   575                           ; 1 bytes @ 0x3
+   576                           
+   577  0073                     ??_task4:	
+   578                           ; 1 bytes @ 0x3
+   579                           
+   580                           
+   581                           ; 1 bytes @ 0x3
+   582  0073                     	ds	1
+   583  0074                     OS_AddThreads@func3:	
+   584                           
+   585                           ; 2 bytes @ 0x4
+   586  0074                     	ds	1
+   587  0075                     ??_OS_Launch:	
+   588  0075                     ??_OS_Scheduler:	
+   589                           ; 1 bytes @ 0x5
+   590                           
+   591                           
+   592                           ; 1 bytes @ 0x5
+   593  0075                     	ds	1
+   594  0076                     OS_Scheduler@PrvRunPt:	
+   595  0076                     OS_AddThreads@func4:	
+   596                           ; 1 bytes @ 0x6
+   597                           
+   598                           
+   599                           ; 2 bytes @ 0x6
+   600  0076                     	ds	1
+   601  0077                     OS_Scheduler@sleep:	
+   602                           
+   603                           ; 1 bytes @ 0x7
+   604  0077                     	ds	1
+   605  0078                     ??_OS_AddThreads:	
+   606                           
+   607                           ; 1 bytes @ 0x8
+   608  0078                     	ds	1
+   609  0079                     ??_main:	
+   610                           
+   611                           	psect	maintext
+   612  06F8                     __pmaintext:	
+   613                           ; 1 bytes @ 0x9
+   614 ;;
+   615 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   616 ;;
+   617 ;; *************** function _main *****************
+   618 ;; Defined at:
+   619 ;;		line 27 in file "main.c"
+   620 ;; Parameters:    Size  Location     Type
+   621 ;;		None
+   622 ;; Auto vars:     Size  Location     Type
+   623 ;;		None
+   624 ;; Return value:  Size  Location     Type
+   625 ;;                  1    wreg      void 
+   626 ;; Registers used:
+   627 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+   628 ;; Tracked objects:
+   629 ;;		On entry : B1F/0
+   630 ;;		On exit  : 0/0
+   631 ;;		Unchanged: 0/0
+   632 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   633 ;;      Params:         0       0       0       0       0       0       0       0
+   634 ;;      Locals:         0       0       0       0       0       0       0       0
+   635 ;;      Temps:          0       0       0       0       0       0       0       0
+   636 ;;      Totals:         0       0       0       0       0       0       0       0
+   637 ;;Total ram usage:        0 bytes
+   638 ;; Hardware stack levels required when called:    3
+   639 ;; This function calls:
+   640 ;;		_OS_AddThreads
+   641 ;;		_OS_Launch
+   642 ;;		_OS_Scheduler
+   643 ;; This function is called by:
+   644 ;;		Startup code after reset
+   645 ;; This function uses a non-reentrant model
+   646 ;;
+   647                           
+   648                           
+   649                           ;psect for function _main
+   650  06F8                     _main:	
+   651                           
+   652                           ;main.c: 29: OS_AddThreads(task1, task2, task3, task4);
+   653                           
+   654                           ;incstack = 0
+   655                           ; Regs used in _main: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+   656  06F8  30E5               	movlw	low _task1
+   657  06F9  00F0               	movwf	OS_AddThreads@func1
+   658  06FA  3006               	movlw	high _task1
+   659  06FB  00F1               	movwf	OS_AddThreads@func1+1
+   660  06FC  3012               	movlw	low _task2
+   661  06FD  00F2               	movwf	OS_AddThreads@func2
+   662  06FE  3007               	movlw	high _task2
+   663  06FF  00F3               	movwf	OS_AddThreads@func2+1
+   664  0700  302D               	movlw	low _task3
+   665  0701  00F4               	movwf	OS_AddThreads@func3
+   666  0702  3007               	movlw	high _task3
+   667  0703  00F5               	movwf	OS_AddThreads@func3+1
+   668  0704  30D8               	movlw	low _task4
+   669  0705  00F6               	movwf	OS_AddThreads@func4
+   670  0706  3006               	movlw	high _task4
+   671  0707  00F7               	movwf	OS_AddThreads@func4+1
+   672  0708  3187  278F  3186   	fcall	_OS_AddThreads
+   673                           
+   674                           ;main.c: 31: OS_Launch();
+   675  070B  3186  26CF  3186   	fcall	_OS_Launch
+   676  070E                     l662:	
+   677                           ;main.c: 33: while(1)
+   678                           
+   679                           
+   680                           ;main.c: 34: {
+   681                           ;main.c: 35: OS_Scheduler();
+   682  070E  3187  27B9  3186   	fcall	_OS_Scheduler
+   683  0711  2F0E               	goto	l662
+   684  0712                     __end_of_main:	
+   685                           
+   686                           	psect	text1
+   687  07B9                     __ptext1:	
+   688 ;; *************** function _OS_Scheduler *****************
+   689 ;; Defined at:
+   690 ;;		line 68 in file "projectOS.c"
+   691 ;; Parameters:    Size  Location     Type
+   692 ;;		None
+   693 ;; Auto vars:     Size  Location     Type
+   694 ;;  sleep           1    7[COMMON] unsigned char 
+   695 ;;  PrvRunPt        1    6[COMMON] PTR struct tcb
+   696 ;;		 -> NULL(0), tcbs(16), 
+   697 ;; Return value:  Size  Location     Type
+   698 ;;                  1    wreg      void 
+   699 ;; Registers used:
+   700 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+   701 ;; Tracked objects:
+   702 ;;		On entry : 0/0
+   703 ;;		On exit  : 0/0
+   704 ;;		Unchanged: 0/0
+   705 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   706 ;;      Params:         0       0       0       0       0       0       0       0
+   707 ;;      Locals:         2       0       0       0       0       0       0       0
+   708 ;;      Temps:          1       0       0       0       0       0       0       0
+   709 ;;      Totals:         3       0       0       0       0       0       0       0
+   710 ;;Total ram usage:        3 bytes
+   711 ;; Hardware stack levels used:    1
+   712 ;; Hardware stack levels required when called:    2
+   713 ;; This function calls:
+   714 ;;		_task1
+   715 ;;		_task2
+   716 ;;		_task3
+   717 ;;		_task4
+   718 ;; This function is called by:
+   719 ;;		_main
+   720 ;; This function uses a non-reentrant model
+   721 ;;
+   722                           
+   723                           
+   724                           ;psect for function _OS_Scheduler
+   725  07B9                     _OS_Scheduler:	
+   726                           
+   727                           ;projectOS.c: 70: tcbType *PrvRunPt;
+   728                           ;projectOS.c: 71: uint8_t sleep = 0;
+   729                           
+   730                           ;incstack = 0
+   731                           ; Regs used in _OS_Scheduler: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+   732  07B9  01F7               	clrf	OS_Scheduler@sleep
+   733                           
+   734                           ;projectOS.c: 73: PrvRunPt = RunPt;
+   735  07BA  087D               	movf	_RunPt,w
+   736  07BB  00F5               	movwf	??_OS_Scheduler
+   737  07BC  0875               	movf	??_OS_Scheduler,w
+   738  07BD  00F6               	movwf	OS_Scheduler@PrvRunPt
+   739                           
+   740                           ;projectOS.c: 74: RunPt = RunPt->next;
+   741  07BE  087D               	movf	_RunPt,w
+   742  07BF  0086               	movwf	6
+   743  07C0  0187               	clrf	7
+   744  07C1  3F42               	moviw [2]fsr1
+   745  07C2  00FD               	movwf	_RunPt
+   746  07C3                     l652:	
+   747                           ;projectOS.c: 76: while(RunPt->blocked)
+   748                           
+   749  07C3  087D               	movf	_RunPt,w
+   750  07C4  3E03               	addlw	3
+   751  07C5  0086               	movwf	6
+   752  07C6  0187               	clrf	7
+   753  07C7  0801               	movf	1,w
+   754  07C8  1903               	btfsc	3,2
+   755  07C9  2FDC               	goto	l654
+   756                           
+   757                           ;projectOS.c: 77: {
+   758                           ;projectOS.c: 78: RunPt = RunPt->next;
+   759  07CA  087D               	movf	_RunPt,w
+   760  07CB  0086               	movwf	6
+   761  07CC  0187               	clrf	7
+   762  07CD  3F42               	moviw [2]fsr1
+   763  07CE  00FD               	movwf	_RunPt
+   764                           
+   765                           ;projectOS.c: 80: if (RunPt == PrvRunPt)
+   766  07CF  087D               	movf	_RunPt,w
+   767  07D0  0676               	xorwf	OS_Scheduler@PrvRunPt,w
+   768  07D1  1D03               	skipz
+   769  07D2  2FC3               	goto	l652
+   770                           
+   771                           ;projectOS.c: 81: {
+   772                           ;projectOS.c: 82: if (RunPt->blocked)
+   773  07D3  087D               	movf	_RunPt,w
+   774  07D4  3E03               	addlw	3
+   775  07D5  0086               	movwf	6
+   776  07D6  0187               	clrf	7
+   777  07D7  0801               	movf	1,w
+   778  07D8  1903               	btfsc	3,2
+   779  07D9  2FDC               	goto	l654
+   780                           
+   781                           ;projectOS.c: 83: {
+   782                           ;projectOS.c: 84: sleep = 1;
+   783  07DA  01F7               	clrf	OS_Scheduler@sleep
+   784  07DB  0AF7               	incf	OS_Scheduler@sleep,f
+   785  07DC                     l654:	
+   786                           ;projectOS.c: 85: }
+   787                           ;projectOS.c: 86: break;
+   788                           
+   789                           
+   790                           ;projectOS.c: 87: }
+   791                           ;projectOS.c: 88: }
+   792                           ;projectOS.c: 90: if (!sleep)
+   793  07DC  0877               	movf	OS_Scheduler@sleep,w
+   794  07DD  1D03               	btfss	3,2
+   795  07DE  2FE8               	goto	l78
+   796                           
+   797                           ;projectOS.c: 91: RunPt->func();
+   798  07DF  087D               	movf	_RunPt,w
+   799  07E0  0086               	movwf	6
+   800  07E1  0187               	clrf	7
+   801  07E2  3F41               	moviw [1]fsr1
+   802  07E3  008A               	movwf	10
+   803  07E4  3F40               	moviw [0]fsr1
+   804  07E5  000A               	callw
+   805  07E6  3187               	pagesel	$
+   806  07E7  0008               	return
+   807  07E8                     l78:	
+   808  07E8  0063               	sleep	;# 
+   809  07E9  0008               	return
+   810  07EA                     __end_of_OS_Scheduler:	
+   811                           
+   812                           	psect	text2
+   813  06CF                     __ptext2:	
+   814 ;; *************** function _OS_Launch *****************
+   815 ;; Defined at:
+   816 ;;		line 55 in file "projectOS.c"
+   817 ;; Parameters:    Size  Location     Type
+   818 ;;		None
+   819 ;; Auto vars:     Size  Location     Type
+   820 ;;		None
+   821 ;; Return value:  Size  Location     Type
+   822 ;;                  1    wreg      void 
+   823 ;; Registers used:
+   824 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+   825 ;; Tracked objects:
+   826 ;;		On entry : 0/0
+   827 ;;		On exit  : 0/0
+   828 ;;		Unchanged: 0/0
+   829 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   830 ;;      Params:         0       0       0       0       0       0       0       0
+   831 ;;      Locals:         0       0       0       0       0       0       0       0
+   832 ;;      Temps:          0       0       0       0       0       0       0       0
+   833 ;;      Totals:         0       0       0       0       0       0       0       0
+   834 ;;Total ram usage:        0 bytes
+   835 ;; Hardware stack levels used:    1
+   836 ;; Hardware stack levels required when called:    2
+   837 ;; This function calls:
+   838 ;;		_task1
+   839 ;;		_task2
+   840 ;;		_task3
+   841 ;;		_task4
+   842 ;; This function is called by:
+   843 ;;		_main
+   844 ;; This function uses a non-reentrant model
+   845 ;;
+   846                           
+   847                           
+   848                           ;psect for function _OS_Launch
+   849  06CF                     _OS_Launch:	
+   850                           
+   851                           ;projectOS.c: 57: RunPt->func();
+   852                           
+   853                           ;incstack = 0
+   854                           ; Regs used in _OS_Launch: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+   855  06CF  087D               	movf	_RunPt,w
+   856  06D0  0086               	movwf	6
+   857  06D1  0187               	clrf	7
+   858  06D2  3F41               	moviw [1]fsr1
+   859  06D3  008A               	movwf	10
+   860  06D4  3F40               	moviw [0]fsr1
+   861  06D5  000A               	callw
+   862  06D6  3186               	pagesel	$
+   863  06D7  0008               	return
+   864  06D8                     __end_of_OS_Launch:	
+   865                           
+   866                           	psect	text3
+   867  072D                     __ptext3:	
+   868 ;; *************** function _task3 *****************
+   869 ;; Defined at:
+   870 ;;		line 58 in file "main.c"
+   871 ;; Parameters:    Size  Location     Type
+   872 ;;		None
+   873 ;; Auto vars:     Size  Location     Type
+   874 ;;		None
+   875 ;; Return value:  Size  Location     Type
+   876 ;;                  1    wreg      void 
+   877 ;; Registers used:
+   878 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+   879 ;; Tracked objects:
+   880 ;;		On entry : 0/0
+   881 ;;		On exit  : 0/0
+   882 ;;		Unchanged: 0/0
+   883 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   884 ;;      Params:         0       0       0       0       0       0       0       0
+   885 ;;      Locals:         0       0       0       0       0       0       0       0
+   886 ;;      Temps:          2       0       0       0       0       0       0       0
+   887 ;;      Totals:         2       0       0       0       0       0       0       0
+   888 ;;Total ram usage:        2 bytes
+   889 ;; Hardware stack levels used:    1
+   890 ;; Hardware stack levels required when called:    1
+   891 ;; This function calls:
+   892 ;;		_OS_Signal
+   893 ;;		_OS_Wait
+   894 ;; This function is called by:
+   895 ;;		_main
+   896 ;;		_OS_Launch
+   897 ;;		_OS_Scheduler
+   898 ;; This function uses a non-reentrant model
+   899 ;;
+   900                           
+   901                           
+   902                           ;psect for function _task3
+   903  072D                     _task3:	
+   904                           
+   905                           ;main.c: 60: if(OS_Wait(&sema2))
+   906                           
+   907                           ;incstack = 0
+   908                           ; Regs used in _task3: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+   909  072D  307B               	movlw	(low (_sema2| 0))& (0+255)
+   910  072E  3187  2748  3187   	fcall	_OS_Wait
+   911  0731  3A00               	xorlw	0
+   912  0732  1D03               	btfss	3,2
+   913  0733  0008               	return
+   914                           
+   915                           ;main.c: 63: if ( (k % 0x10) == 0)
+   916                           
+   917                           ;main.c: 61: return;
+   918  0734  300F               	movlw	15
+   919  0735  0020               	movlb	0	; select bank0
+   920  0736  0524               	andwf	_k,w
+   921  0737  00F3               	movwf	??_task3
+   922  0738  3000               	movlw	0
+   923  0739  0525               	andwf	_k+1,w
+   924  073A  00F4               	movwf	??_task3+1
+   925  073B  0873               	movf	??_task3,w
+   926  073C  0474               	iorwf	??_task3+1,w
+   927  073D  1D03               	btfss	3,2
+   928  073E  2F42               	goto	l618
+   929                           
+   930                           ;main.c: 64: OS_Signal(&sema3);
+   931  073F  307C               	movlw	(low (_sema3| 0))& (0+255)
+   932  0740  3187  2766         	fcall	_OS_Signal
+   933  0742                     l618:	
+   934                           
+   935                           ;main.c: 65: k++;
+   936  0742  3001               	movlw	1
+   937  0743  0020               	movlb	0	; select bank0
+   938  0744  07A4               	addwf	_k,f
+   939  0745  3000               	movlw	0
+   940  0746  3DA5               	addwfc	_k+1,f
+   941  0747  0008               	return
+   942  0748                     __end_of_task3:	
+   943                           
+   944                           	psect	text4
+   945  0712                     __ptext4:	
+   946 ;; *************** function _task2 *****************
+   947 ;; Defined at:
+   948 ;;		line 47 in file "main.c"
+   949 ;; Parameters:    Size  Location     Type
+   950 ;;		None
+   951 ;; Auto vars:     Size  Location     Type
+   952 ;;		None
+   953 ;; Return value:  Size  Location     Type
+   954 ;;                  1    wreg      void 
+   955 ;; Registers used:
+   956 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+   957 ;; Tracked objects:
+   958 ;;		On entry : 0/0
+   959 ;;		On exit  : 0/0
+   960 ;;		Unchanged: 0/0
+   961 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+   962 ;;      Params:         0       0       0       0       0       0       0       0
+   963 ;;      Locals:         0       0       0       0       0       0       0       0
+   964 ;;      Temps:          2       0       0       0       0       0       0       0
+   965 ;;      Totals:         2       0       0       0       0       0       0       0
+   966 ;;Total ram usage:        2 bytes
+   967 ;; Hardware stack levels used:    1
+   968 ;; Hardware stack levels required when called:    1
+   969 ;; This function calls:
+   970 ;;		_OS_Signal
+   971 ;;		_OS_Wait
+   972 ;; This function is called by:
+   973 ;;		_main
+   974 ;;		_OS_Launch
+   975 ;;		_OS_Scheduler
+   976 ;; This function uses a non-reentrant model
+   977 ;;
+   978                           
+   979                           
+   980                           ;psect for function _task2
+   981  0712                     _task2:	
+   982                           
+   983                           ;main.c: 49: if(OS_Wait(&sema1))
+   984                           
+   985                           ;incstack = 0
+   986                           ; Regs used in _task2: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+   987  0712  307A               	movlw	(low (_sema1| 0))& (0+255)
+   988  0713  3187  2748  3187   	fcall	_OS_Wait
+   989  0716  3A00               	xorlw	0
+   990  0717  1D03               	btfss	3,2
+   991  0718  0008               	return
+   992                           
+   993                           ;main.c: 52: if ( (j % 0x10) == 0)
+   994                           
+   995                           ;main.c: 50: return;
+   996  0719  300F               	movlw	15
+   997  071A  0020               	movlb	0	; select bank0
+   998  071B  0522               	andwf	_j,w
+   999  071C  00F3               	movwf	??_task2
+  1000  071D  3000               	movlw	0
+  1001  071E  0523               	andwf	_j+1,w
+  1002  071F  00F4               	movwf	??_task2+1
+  1003  0720  0873               	movf	??_task2,w
+  1004  0721  0474               	iorwf	??_task2+1,w
+  1005  0722  1D03               	btfss	3,2
+  1006  0723  2F27               	goto	l608
+  1007                           
+  1008                           ;main.c: 53: OS_Signal(&sema2);
+  1009  0724  307B               	movlw	(low (_sema2| 0))& (0+255)
+  1010  0725  3187  2766         	fcall	_OS_Signal
+  1011  0727                     l608:	
+  1012                           
+  1013                           ;main.c: 55: j++;
+  1014  0727  3001               	movlw	1
+  1015  0728  0020               	movlb	0	; select bank0
+  1016  0729  07A2               	addwf	_j,f
+  1017  072A  3000               	movlw	0
+  1018  072B  3DA3               	addwfc	_j+1,f
+  1019  072C  0008               	return
+  1020  072D                     __end_of_task2:	
+  1021                           
+  1022                           	psect	text5
+  1023  06E5                     __ptext5:	
+  1024 ;; *************** function _task1 *****************
+  1025 ;; Defined at:
+  1026 ;;		line 39 in file "main.c"
+  1027 ;; Parameters:    Size  Location     Type
+  1028 ;;		None
+  1029 ;; Auto vars:     Size  Location     Type
+  1030 ;;		None
+  1031 ;; Return value:  Size  Location     Type
+  1032 ;;                  1    wreg      void 
+  1033 ;; Registers used:
+  1034 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+  1035 ;; Tracked objects:
+  1036 ;;		On entry : 0/0
+  1037 ;;		On exit  : 0/0
+  1038 ;;		Unchanged: 0/0
+  1039 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  1040 ;;      Params:         0       0       0       0       0       0       0       0
+  1041 ;;      Locals:         0       0       0       0       0       0       0       0
+  1042 ;;      Temps:          2       0       0       0       0       0       0       0
+  1043 ;;      Totals:         2       0       0       0       0       0       0       0
+  1044 ;;Total ram usage:        2 bytes
+  1045 ;; Hardware stack levels used:    1
+  1046 ;; Hardware stack levels required when called:    1
+  1047 ;; This function calls:
+  1048 ;;		_OS_Signal
+  1049 ;; This function is called by:
+  1050 ;;		_main
+  1051 ;;		_OS_Launch
+  1052 ;;		_OS_Scheduler
+  1053 ;; This function uses a non-reentrant model
+  1054 ;;
+  1055                           
+  1056                           
+  1057                           ;psect for function _task1
+  1058  06E5                     _task1:	
+  1059                           
+  1060                           ;main.c: 41: i++;
+  1061                           
+  1062                           ;incstack = 0
+  1063                           ; Regs used in _task1: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+  1064  06E5  3001               	movlw	1
+  1065  06E6  0020               	movlb	0	; select bank0
+  1066  06E7  07A0               	addwf	_i,f
+  1067  06E8  3000               	movlw	0
+  1068  06E9  3DA1               	addwfc	_i+1,f
+  1069                           
+  1070                           ;main.c: 43: if ( (i % 0x10) == 0)
+  1071  06EA  300F               	movlw	15
+  1072  06EB  0520               	andwf	_i,w
+  1073  06EC  00F3               	movwf	??_task1
+  1074  06ED  3000               	movlw	0
+  1075  06EE  0521               	andwf	_i+1,w
+  1076  06EF  00F4               	movwf	??_task1+1
+  1077  06F0  0873               	movf	??_task1,w
+  1078  06F1  0474               	iorwf	??_task1+1,w
+  1079  06F2  1D03               	btfss	3,2
+  1080  06F3  0008               	return
+  1081                           
+  1082                           ;main.c: 44: OS_Signal(&sema1);
+  1083  06F4  307A               	movlw	(low (_sema1| 0))& (0+255)
+  1084  06F5  3187  2766         	fcall	_OS_Signal
+  1085  06F7  0008               	return
+  1086  06F8                     __end_of_task1:	
+  1087                           
+  1088                           	psect	text6
+  1089  06D8                     __ptext6:	
+  1090 ;; *************** function _task4 *****************
+  1091 ;; Defined at:
+  1092 ;;		line 68 in file "main.c"
+  1093 ;; Parameters:    Size  Location     Type
+  1094 ;;		None
+  1095 ;; Auto vars:     Size  Location     Type
+  1096 ;;		None
+  1097 ;; Return value:  Size  Location     Type
+  1098 ;;                  1    wreg      void 
+  1099 ;; Registers used:
+  1100 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+  1101 ;; Tracked objects:
+  1102 ;;		On entry : 0/0
+  1103 ;;		On exit  : 0/0
+  1104 ;;		Unchanged: 0/0
+  1105 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  1106 ;;      Params:         0       0       0       0       0       0       0       0
+  1107 ;;      Locals:         0       0       0       0       0       0       0       0
+  1108 ;;      Temps:          0       0       0       0       0       0       0       0
+  1109 ;;      Totals:         0       0       0       0       0       0       0       0
+  1110 ;;Total ram usage:        0 bytes
+  1111 ;; Hardware stack levels used:    1
+  1112 ;; Hardware stack levels required when called:    1
+  1113 ;; This function calls:
+  1114 ;;		_OS_Wait
+  1115 ;; This function is called by:
+  1116 ;;		_main
+  1117 ;;		_OS_Launch
+  1118 ;;		_OS_Scheduler
+  1119 ;; This function uses a non-reentrant model
+  1120 ;;
+  1121                           
+  1122                           
+  1123                           ;psect for function _task4
+  1124  06D8                     _task4:	
+  1125                           
+  1126                           ;main.c: 70: if(OS_Wait(&sema3))
+  1127                           
+  1128                           ;incstack = 0
+  1129                           ; Regs used in _task4: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+  1130  06D8  307C               	movlw	(low (_sema3| 0))& (0+255)
+  1131  06D9  3187  2748  3186   	fcall	_OS_Wait
+  1132  06DC  3A00               	xorlw	0
+  1133  06DD  1D03               	btfss	3,2
+  1134  06DE  0008               	return
+  1135                           
+  1136                           ;main.c: 73: l++;
+  1137                           
+  1138                           ;main.c: 71: return;
+  1139  06DF  3001               	movlw	1
+  1140  06E0  0020               	movlb	0	; select bank0
+  1141  06E1  07A6               	addwf	_l,f
+  1142  06E2  3000               	movlw	0
+  1143  06E3  3DA7               	addwfc	_l+1,f
+  1144  06E4  0008               	return
+  1145  06E5                     __end_of_task4:	
+  1146                           
+  1147                           	psect	text7
+  1148  0748                     __ptext7:	
+  1149 ;; *************** function _OS_Wait *****************
+  1150 ;; Defined at:
+  1151 ;;		line 106 in file "projectOS.c"
+  1152 ;; Parameters:    Size  Location     Type
+  1153 ;;  semaPt          1    wreg     PTR char 
+  1154 ;;		 -> sema3(1), sema2(1), sema1(1), 
+  1155 ;; Auto vars:     Size  Location     Type
+  1156 ;;  semaPt          1    2[COMMON] PTR char 
+  1157 ;;		 -> sema3(1), sema2(1), sema1(1), 
+  1158 ;;  ret             1    1[COMMON] unsigned char 
+  1159 ;; Return value:  Size  Location     Type
+  1160 ;;                  1    wreg      unsigned char 
+  1161 ;; Registers used:
+  1162 ;;		wreg, fsr1l, fsr1h, status,2, status,0
+  1163 ;; Tracked objects:
+  1164 ;;		On entry : 0/0
+  1165 ;;		On exit  : 0/0
+  1166 ;;		Unchanged: 0/0
+  1167 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  1168 ;;      Params:         0       0       0       0       0       0       0       0
+  1169 ;;      Locals:         2       0       0       0       0       0       0       0
+  1170 ;;      Temps:          1       0       0       0       0       0       0       0
+  1171 ;;      Totals:         3       0       0       0       0       0       0       0
+  1172 ;;Total ram usage:        3 bytes
+  1173 ;; Hardware stack levels used:    1
+  1174 ;; This function calls:
+  1175 ;;		Nothing
+  1176 ;; This function is called by:
+  1177 ;;		_task2
+  1178 ;;		_task3
+  1179 ;;		_task4
+  1180 ;; This function uses a non-reentrant model
+  1181 ;;
+  1182                           
+  1183                           
+  1184                           ;psect for function _OS_Wait
+  1185  0748                     _OS_Wait:	
+  1186                           
+  1187                           ;incstack = 0
+  1188                           ; Regs used in _OS_Wait: [wreg+fsr1l+fsr1h+status,2+status,0]
+  1189                           ;OS_Wait@semaPt stored from wreg
+  1190  0748  00F2               	movwf	OS_Wait@semaPt
+  1191                           
+  1192                           ;projectOS.c: 108: uint8_t ret;
+  1193                           ;projectOS.c: 110: if (*semaPt > 0)
+  1194  0749  0872               	movf	OS_Wait@semaPt,w
+  1195  074A  0086               	movwf	6
+  1196  074B  0187               	clrf	7
+  1197  074C  0801               	movf	1,w
+  1198  074D  3A80               	xorlw	128
+  1199  074E  3E7F               	addlw	-129
+  1200  074F  1C03               	skipc
+  1201  0750  2F53               	goto	l586
+  1202                           
+  1203                           ;projectOS.c: 111: ret = 0;
+  1204  0751  01F1               	clrf	OS_Wait@ret
+  1205  0752  2F5D               	goto	l84
+  1206  0753                     l586:	
+  1207                           
+  1208                           ;projectOS.c: 112: else
+  1209                           ;projectOS.c: 113: {
+  1210                           ;projectOS.c: 114: RunPt->blocked = semaPt;
+  1211  0753  0872               	movf	OS_Wait@semaPt,w
+  1212  0754  00F0               	movwf	??_OS_Wait
+  1213  0755  087D               	movf	_RunPt,w
+  1214  0756  3E03               	addlw	3
+  1215  0757  0086               	movwf	6
+  1216  0758  0187               	clrf	7
+  1217  0759  0870               	movf	??_OS_Wait,w
+  1218  075A  0081               	movwf	1
+  1219                           
+  1220                           ;projectOS.c: 115: ret = 1;
+  1221  075B  01F1               	clrf	OS_Wait@ret
+  1222  075C  0AF1               	incf	OS_Wait@ret,f
+  1223  075D                     l84:	
+  1224                           
+  1225                           ;projectOS.c: 116: }
+  1226                           ;projectOS.c: 118: (*semaPt)--;
+  1227  075D  30FF               	movlw	255
+  1228  075E  00F0               	movwf	??_OS_Wait
+  1229  075F  0872               	movf	OS_Wait@semaPt,w
+  1230  0760  0086               	movwf	6
+  1231  0761  0187               	clrf	7
+  1232  0762  0870               	movf	??_OS_Wait,w
+  1233  0763  0781               	addwf	1,f
+  1234                           
+  1235                           ;projectOS.c: 121: return(ret);
+  1236  0764  0871               	movf	OS_Wait@ret,w
+  1237  0765  0008               	return
+  1238  0766                     __end_of_OS_Wait:	
+  1239                           
+  1240                           	psect	text8
+  1241  0766                     __ptext8:	
+  1242 ;; *************** function _OS_Signal *****************
+  1243 ;; Defined at:
+  1244 ;;		line 130 in file "projectOS.c"
+  1245 ;; Parameters:    Size  Location     Type
+  1246 ;;  semaPt          1    wreg     PTR char 
+  1247 ;;		 -> sema3(1), sema2(1), sema1(1), 
+  1248 ;; Auto vars:     Size  Location     Type
+  1249 ;;  semaPt          1    1[COMMON] PTR char 
+  1250 ;;		 -> sema3(1), sema2(1), sema1(1), 
+  1251 ;;  pt              1    2[COMMON] PTR struct tcb
+  1252 ;;		 -> tcbs(16), 
+  1253 ;;  wBlocked        1    0[COMMON] PTR char 
+  1254 ;;		 -> NULL(0), sema3(1), sema2(1), sema1(1), 
+  1255 ;; Return value:  Size  Location     Type
+  1256 ;;                  1    wreg      void 
+  1257 ;; Registers used:
+  1258 ;;		wreg, fsr1l, fsr1h, status,2, status,0
+  1259 ;; Tracked objects:
+  1260 ;;		On entry : 0/0
+  1261 ;;		On exit  : 0/0
+  1262 ;;		Unchanged: 0/0
+  1263 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  1264 ;;      Params:         0       0       0       0       0       0       0       0
+  1265 ;;      Locals:         3       0       0       0       0       0       0       0
+  1266 ;;      Temps:          0       0       0       0       0       0       0       0
+  1267 ;;      Totals:         3       0       0       0       0       0       0       0
+  1268 ;;Total ram usage:        3 bytes
+  1269 ;; Hardware stack levels used:    1
+  1270 ;; This function calls:
+  1271 ;;		Nothing
+  1272 ;; This function is called by:
+  1273 ;;		_task1
+  1274 ;;		_task2
+  1275 ;;		_task3
+  1276 ;; This function uses a non-reentrant model
+  1277 ;;
+  1278                           
+  1279                           
+  1280                           ;psect for function _OS_Signal
+  1281  0766                     _OS_Signal:	
+  1282                           
+  1283                           ;incstack = 0
+  1284                           ; Regs used in _OS_Signal: [wreg+fsr1l+fsr1h+status,2+status,0]
+  1285                           ;OS_Signal@semaPt stored from wreg
+  1286  0766  00F1               	movwf	OS_Signal@semaPt
+  1287                           
+  1288                           ;projectOS.c: 132: tcbType *pt;
+  1289                           ;projectOS.c: 133: int8_t *wBlocked;
+  1290                           ;projectOS.c: 135: if(*semaPt < 0)
+  1291  0767  0871               	movf	OS_Signal@semaPt,w
+  1292  0768  0086               	movwf	6
+  1293  0769  0187               	clrf	7
+  1294  076A  1F81               	btfss	1,7
+  1295  076B  2F89               	goto	l578
+  1296                           
+  1297                           ;projectOS.c: 136: {
+  1298                           ;projectOS.c: 138: pt = RunPt->next;
+  1299  076C  087D               	movf	_RunPt,w
+  1300  076D  0086               	movwf	6
+  1301  076E  0187               	clrf	7
+  1302  076F  3F42               	moviw [2]fsr1
+  1303  0770  00F2               	movwf	OS_Signal@pt
+  1304                           
+  1305                           ;projectOS.c: 139: wBlocked = pt->blocked;
+  1306  0771  0872               	movf	OS_Signal@pt,w
+  1307  0772  0086               	movwf	6
+  1308  0773  0187               	clrf	7
+  1309  0774  3F43               	moviw [3]fsr1
+  1310  0775  00F0               	movwf	OS_Signal@wBlocked
+  1311  0776                     l574:	
+  1312                           ;projectOS.c: 141: while(!(pt->blocked == semaPt))
+  1313                           
+  1314  0776  0872               	movf	OS_Signal@pt,w
+  1315  0777  3E03               	addlw	3
+  1316  0778  0086               	movwf	6
+  1317  0779  0187               	clrf	7
+  1318  077A  0801               	movf	1,w
+  1319  077B  0671               	xorwf	OS_Signal@semaPt,w
+  1320  077C  1903               	btfsc	3,2
+  1321  077D  2F84               	goto	l576
+  1322                           
+  1323                           ;projectOS.c: 142: {
+  1324                           ;projectOS.c: 143: pt= pt->next;
+  1325  077E  0872               	movf	OS_Signal@pt,w
+  1326  077F  0086               	movwf	6
+  1327  0780  0187               	clrf	7
+  1328  0781  3F42               	moviw [2]fsr1
+  1329  0782  00F2               	movwf	OS_Signal@pt
+  1330  0783  2F76               	goto	l574
+  1331  0784                     l576:	
+  1332                           
+  1333                           ;projectOS.c: 144: }
+  1334                           ;projectOS.c: 145: pt->blocked = 0;
+  1335  0784  0872               	movf	OS_Signal@pt,w
+  1336  0785  3E03               	addlw	3
+  1337  0786  0086               	movwf	6
+  1338  0787  0187               	clrf	7
+  1339  0788  0181               	clrf	1
+  1340  0789                     l578:	
+  1341                           
+  1342                           ;projectOS.c: 146: }
+  1343                           ;projectOS.c: 148: *semaPt = 1;
+  1344  0789  0871               	movf	OS_Signal@semaPt,w
+  1345  078A  0086               	movwf	6
+  1346  078B  0187               	clrf	7
+  1347  078C  0181               	clrf	1
+  1348  078D  0A81               	incf	1,f
+  1349  078E  0008               	return
+  1350  078F                     __end_of_OS_Signal:	
+  1351                           ;projectOS.c: 150: return;
+  1352                           
+  1353                           
+  1354                           	psect	text9
+  1355  078F                     __ptext9:	
+  1356 ;; *************** function _OS_AddThreads *****************
+  1357 ;; Defined at:
+  1358 ;;		line 29 in file "projectOS.c"
+  1359 ;; Parameters:    Size  Location     Type
+  1360 ;;  func1           2    0[COMMON] PTR FTN()void 
+  1361 ;;		 -> task1(1), 
+  1362 ;;  func2           2    2[COMMON] PTR FTN()void 
+  1363 ;;		 -> task2(1), 
+  1364 ;;  func3           2    4[COMMON] PTR FTN()void 
+  1365 ;;		 -> task3(1), 
+  1366 ;;  func4           2    6[COMMON] PTR FTN()void 
+  1367 ;;		 -> task4(1), 
+  1368 ;; Auto vars:     Size  Location     Type
+  1369 ;;		None
+  1370 ;; Return value:  Size  Location     Type
+  1371 ;;                  1    wreg      void 
+  1372 ;; Registers used:
+  1373 ;;		wreg, status,2
+  1374 ;; Tracked objects:
+  1375 ;;		On entry : 0/0
+  1376 ;;		On exit  : 0/0
+  1377 ;;		Unchanged: 0/0
+  1378 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6
+  1379 ;;      Params:         8       0       0       0       0       0       0       0
+  1380 ;;      Locals:         0       0       0       0       0       0       0       0
+  1381 ;;      Temps:          1       0       0       0       0       0       0       0
+  1382 ;;      Totals:         9       0       0       0       0       0       0       0
+  1383 ;;Total ram usage:        9 bytes
+  1384 ;; Hardware stack levels used:    1
+  1385 ;; This function calls:
+  1386 ;;		Nothing
+  1387 ;; This function is called by:
+  1388 ;;		_main
+  1389 ;; This function uses a non-reentrant model
+  1390 ;;
+  1391                           
+  1392                           
+  1393                           ;psect for function _OS_AddThreads
+  1394  078F                     _OS_AddThreads:	
+  1395                           
+  1396                           ;projectOS.c: 34: tcbs[0].func = func1;
+  1397                           
+  1398                           ;incstack = 0
+  1399                           ; Regs used in _OS_AddThreads: [wreg+status,2]
+  1400  078F  0871               	movf	OS_AddThreads@func1+1,w
+  1401  0790  0020               	movlb	0	; select bank0
+  1402  0791  00A9               	movwf	_tcbs+1
+  1403  0792  0870               	movf	OS_AddThreads@func1,w
+  1404  0793  00A8               	movwf	_tcbs
+  1405                           
+  1406                           ;projectOS.c: 35: tcbs[1].func = func2;
+  1407  0794  0873               	movf	OS_AddThreads@func2+1,w
+  1408  0795  00AD               	movwf	(low ((_tcbs| 0+4))+1)
+  1409  0796  0872               	movf	OS_AddThreads@func2,w
+  1410  0797  00AC               	movwf	low ((_tcbs| 0+4))
+  1411                           
+  1412                           ;projectOS.c: 36: tcbs[2].func = func3;
+  1413  0798  0875               	movf	OS_AddThreads@func3+1,w
+  1414  0799  00B1               	movwf	(low ((_tcbs| 0+8))+1)
+  1415  079A  0874               	movf	OS_AddThreads@func3,w
+  1416  079B  00B0               	movwf	low ((_tcbs| 0+8))
+  1417                           
+  1418                           ;projectOS.c: 37: tcbs[3].func = func4;
+  1419  079C  0877               	movf	OS_AddThreads@func4+1,w
+  1420  079D  00B5               	movwf	(low ((_tcbs| 0+12))+1)
+  1421  079E  0876               	movf	OS_AddThreads@func4,w
+  1422  079F  00B4               	movwf	low ((_tcbs| 0+12))
+  1423                           
+  1424                           ;projectOS.c: 39: tcbs[0].next = &tcbs[1];
+  1425  07A0  302C               	movlw	(low ((_tcbs| 0+4)))& (0+255)
+  1426  07A1  00F8               	movwf	??_OS_AddThreads
+  1427  07A2  0878               	movf	??_OS_AddThreads,w
+  1428  07A3  00AA               	movwf	low ((_tcbs| 0+2))
+  1429                           
+  1430                           ;projectOS.c: 40: tcbs[1].next = &tcbs[2];
+  1431  07A4  3030               	movlw	(low ((_tcbs| 0+8)))& (0+255)
+  1432  07A5  00F8               	movwf	??_OS_AddThreads
+  1433  07A6  0878               	movf	??_OS_AddThreads,w
+  1434  07A7  00AE               	movwf	low ((_tcbs| 0+6))
+  1435                           
+  1436                           ;projectOS.c: 41: tcbs[2].next = &tcbs[3];
+  1437  07A8  3034               	movlw	(low ((_tcbs| 0+12)))& (0+255)
+  1438  07A9  00F8               	movwf	??_OS_AddThreads
+  1439  07AA  0878               	movf	??_OS_AddThreads,w
+  1440  07AB  00B2               	movwf	low ((_tcbs| 0+10))
+  1441                           
+  1442                           ;projectOS.c: 42: tcbs[3].next = &tcbs[0];
+  1443  07AC  3028               	movlw	(low (_tcbs| 0))& (0+255)
+  1444  07AD  00F8               	movwf	??_OS_AddThreads
+  1445  07AE  0878               	movf	??_OS_AddThreads,w
+  1446  07AF  00B6               	movwf	low ((_tcbs| 0+14))
+  1447                           
+  1448                           ;projectOS.c: 44: tcbs[0].blocked = 0;
+  1449  07B0  01AB               	clrf	low ((_tcbs| 0+3))
+  1450                           
+  1451                           ;projectOS.c: 45: tcbs[1].blocked = 0;
+  1452  07B1  01AF               	clrf	low ((_tcbs| 0+7))
+  1453                           
+  1454                           ;projectOS.c: 46: tcbs[2].blocked = 0;
+  1455  07B2  01B3               	clrf	low ((_tcbs| 0+11))
+  1456                           
+  1457                           ;projectOS.c: 47: tcbs[3].blocked = 0;
+  1458  07B3  01B7               	clrf	low ((_tcbs| 0+15))
+  1459                           
+  1460                           ;projectOS.c: 49: RunPt = &tcbs[0];
+  1461  07B4  3028               	movlw	(low (_tcbs| 0))& (0+255)
+  1462  07B5  00F8               	movwf	??_OS_AddThreads
+  1463  07B6  0878               	movf	??_OS_AddThreads,w
+  1464  07B7  00FD               	movwf	_RunPt
+  1465  07B8  0008               	return
+  1466  07B9                     __end_of_OS_AddThreads:	
+  1467  007E                     btemp	set	126	;btemp
+  1468  007E                     wtemp	set	126
+  1469  007E                     wtemp0	set	126
+  1470  0080                     wtemp1	set	128
+  1471  0082                     wtemp2	set	130
+  1472  0084                     wtemp3	set	132
+  1473  0086                     wtemp4	set	134
+  1474  0088                     wtemp5	set	136
+  1475  007F                     wtemp6	set	127
+  1476  007E                     ttemp	set	126
+  1477  007E                     ttemp0	set	126
+  1478  0081                     ttemp1	set	129
+  1479  0084                     ttemp2	set	132
+  1480  0087                     ttemp3	set	135
+  1481  007F                     ttemp4	set	127
+  1482  007E                     ltemp	set	126
+  1483  007E                     ltemp0	set	126
+  1484  0082                     ltemp1	set	130
+  1485  0086                     ltemp2	set	134
+  1486  0080                     ltemp3	set	128
+
+
+Data Sizes:
+    Strings     23
+    Constant    0
+    Data        2
+    BSS         28
+    Persistent  1
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON           14      9      14
+    BANK0            80      0      26
+    BANK1            80      0       0
+    BANK2            80      0       0
+    BANK3            80      0       0
+    BANK4            80      0       0
+    BANK5            80      0       0
+    BANK6            16      0       0
+
+Pointer List with Targets:
+
+    OS_Signal@wBlocked	PTR char  size(1) Largest target is 1
+		 -> NULL(NULL[0]), sema3(COMMON[1]), sema2(COMMON[1]), sema1(COMMON[1]), 
+
+    OS_Signal@pt.blocked	PTR char  size(1) Largest target is 1
+		 -> NULL(NULL[0]), sema3(COMMON[1]), sema2(COMMON[1]), sema1(COMMON[1]), 
+
+    OS_Signal@pt.next	PTR struct tcb size(1) Largest target is 24
+		 -> tcbs(BANK0[16]), 
+
+    OS_Signal@pt.func	PTR FTN()void  size(2) Largest target is 1
+		 -> task4(), task3(), task2(), task1(), 
+
+    OS_Signal@pt	PTR struct tcb size(1) Largest target is 24
+		 -> tcbs(BANK0[16]), 
+
+    OS_Signal@semaPt	PTR char  size(1) Largest target is 1
+		 -> sema3(COMMON[1]), sema2(COMMON[1]), sema1(COMMON[1]), 
+
+    OS_Wait@semaPt	PTR char  size(1) Largest target is 1
+		 -> sema3(COMMON[1]), sema2(COMMON[1]), sema1(COMMON[1]), 
+
+    OS_Scheduler@PrvRunPt.blocked	PTR char  size(1) Largest target is 1
+		 -> NULL(NULL[0]), sema3(COMMON[1]), sema2(COMMON[1]), sema1(COMMON[1]), 
+
+    OS_Scheduler@PrvRunPt.next	PTR struct tcb size(1) Largest target is 24
+		 -> tcbs(BANK0[16]), 
+
+    OS_Scheduler@PrvRunPt.func	PTR FTN()void  size(2) Largest target is 1
+		 -> task4(), task3(), task2(), task1(), 
+
+    OS_Scheduler@PrvRunPt	PTR struct tcb size(1) Largest target is 24
+		 -> NULL(NULL[0]), tcbs(BANK0[16]), 
+
+    RunPt.blocked	PTR char  size(1) Largest target is 1
+		 -> NULL(NULL[0]), sema3(COMMON[1]), sema2(COMMON[1]), sema1(COMMON[1]), 
+
+    RunPt.next	PTR struct tcb size(1) Largest target is 24
+		 -> tcbs(BANK0[16]), 
+
+    RunPt.func	PTR FTN()void  size(2) Largest target is 1
+		 -> task4(), task3(), task2(), task1(), 
+
+    RunPt	PTR struct tcb size(1) Largest target is 24
+		 -> NULL(NULL[0]), tcbs(BANK0[16]), 
+
+    OS_AddThreads@func4	PTR FTN()void  size(2) Largest target is 1
+		 -> task4(), 
+
+    OS_AddThreads@func3	PTR FTN()void  size(2) Largest target is 1
+		 -> task3(), 
+
+    OS_AddThreads@func2	PTR FTN()void  size(2) Largest target is 1
+		 -> task2(), 
+
+    S81tcb$blocked	PTR char  size(1) Largest target is 1
+		 -> NULL(NULL[0]), sema3(COMMON[1]), sema2(COMMON[1]), sema1(COMMON[1]), 
+
+    tcbs.blocked	PTR char  size(1) Largest target is 1
+		 -> NULL(NULL[0]), sema3(COMMON[1]), sema2(COMMON[1]), sema1(COMMON[1]), 
+
+    S81tcb$next	PTR struct tcb size(1) Largest target is 24
+		 -> tcbs(BANK0[16]), 
+
+    tcbs.next	PTR struct tcb size(1) Largest target is 24
+		 -> tcbs(BANK0[16]), 
+
+    S81tcb$func	PTR FTN()void  size(2) Largest target is 1
+		 -> task4(), task3(), task2(), task1(), 
+
+    tcbs.func	PTR FTN()void  size(2) Largest target is 1
+		 -> task4(), task3(), task2(), task1(), 
+
+    OS_AddThreads@func1	PTR FTN()void  size(2) Largest target is 1
+		 -> task1(), 
+
+    Version	PTR const unsigned char  size(2) Largest target is 23
+		 -> STR_1(CODE[23]), 
+
+
+Critical Paths under _main in COMMON
+
+    _main->_OS_AddThreads
+    _OS_Scheduler->_task1
+    _OS_Scheduler->_task2
+    _OS_Scheduler->_task3
+    _OS_Launch->_task1
+    _OS_Launch->_task2
+    _OS_Launch->_task3
+    _task4->_OS_Wait
+    _task3->_OS_Signal
+    _task3->_OS_Wait
+    _task2->_OS_Signal
+    _task2->_OS_Wait
+    _task1->_OS_Signal
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0    2801
+                      _OS_AddThreads
+                          _OS_Launch
+                       _OS_Scheduler
+ ---------------------------------------------------------------------------------
+ (1) _OS_Scheduler                                         3     3      0    1274
+                                              5 COMMON     3     3      0
+                              _task1 *
+                              _task2 *
+                              _task3 *
+                              _task4 *
+ ---------------------------------------------------------------------------------
+ (1) _OS_Launch                                            0     0      0    1227
+                              _task1 *
+                              _task2 *
+                              _task3 *
+                              _task4 *
+ ---------------------------------------------------------------------------------
+ (2) _task4                                                0     0      0     171
+                            _OS_Wait
+ ---------------------------------------------------------------------------------
+ (2) _task3                                                2     2      0     409
+                                              3 COMMON     2     2      0
+                          _OS_Signal
+                            _OS_Wait
+ ---------------------------------------------------------------------------------
+ (2) _task2                                                2     2      0     409
+                                              3 COMMON     2     2      0
+                          _OS_Signal
+                            _OS_Wait
+ ---------------------------------------------------------------------------------
+ (3) _OS_Wait                                              3     3      0     171
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ (2) _task1                                                2     2      0     238
+                                              3 COMMON     2     2      0
+                          _OS_Signal
+ ---------------------------------------------------------------------------------
+ (3) _OS_Signal                                            3     3      0     238
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _OS_AddThreads                                        9     1      8     300
+                                              0 COMMON     9     1      8
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 3
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _OS_AddThreads
+   _OS_Launch
+     _task1 *
+       _OS_Signal
+     _task2 *
+       _OS_Signal
+       _OS_Wait
+     _task3 *
+       _OS_Signal
+       _OS_Wait
+     _task4 *
+       _OS_Wait
+   _OS_Scheduler
+     _task1 *
+       _OS_Signal
+     _task2 *
+       _OS_Signal
+       _OS_Wait
+     _task3 *
+       _OS_Signal
+       _OS_Wait
+     _task4 *
+       _OS_Wait
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             1F0      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITCOMMON            E      0       0       1        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               E      9       E       2      100.0%
+BITSFR1              0      0       0       2        0.0%
+SFR1                 0      0       0       2        0.0%
+BITSFR2              0      0       0       3        0.0%
+SFR2                 0      0       0       3        0.0%
+STACK                0      0       0       3        0.0%
+BITSFR3              0      0       0       4        0.0%
+SFR3                 0      0       0       4        0.0%
+ABS                  0      0      28       4        0.0%
+BITBANK0            50      0       0       5        0.0%
+BITSFR4              0      0       0       5        0.0%
+SFR4                 0      0       0       5        0.0%
+BANK0               50      0      1A       6       32.5%
+BITSFR5              0      0       0       6        0.0%
+SFR5                 0      0       0       6        0.0%
+BITBANK1            50      0       0       7        0.0%
+BITSFR6              0      0       0       7        0.0%
+SFR6                 0      0       0       7        0.0%
+BANK1               50      0       0       8        0.0%
+BITSFR7              0      0       0       8        0.0%
+SFR7                 0      0       0       8        0.0%
+BITBANK2            50      0       0       9        0.0%
+BITSFR8              0      0       0       9        0.0%
+SFR8                 0      0       0       9        0.0%
+BANK2               50      0       0      10        0.0%
+BITSFR9              0      0       0      10        0.0%
+SFR9                 0      0       0      10        0.0%
+BITBANK3            50      0       0      11        0.0%
+BITSFR10             0      0       0      11        0.0%
+SFR10                0      0       0      11        0.0%
+BANK3               50      0       0      12        0.0%
+BITSFR11             0      0       0      12        0.0%
+SFR11                0      0       0      12        0.0%
+BITBANK4            50      0       0      13        0.0%
+BITSFR12             0      0       0      13        0.0%
+SFR12                0      0       0      13        0.0%
+BANK4               50      0       0      14        0.0%
+BITSFR13             0      0       0      14        0.0%
+SFR13                0      0       0      14        0.0%
+BITBANK5            50      0       0      15        0.0%
+BITSFR14             0      0       0      15        0.0%
+SFR14                0      0       0      15        0.0%
+BANK5               50      0       0      16        0.0%
+BITSFR15             0      0       0      16        0.0%
+SFR15                0      0       0      16        0.0%
+BITBANK6            10      0       0      17        0.0%
+BITSFR16             0      0       0      17        0.0%
+SFR16                0      0       0      17        0.0%
+BANK6               10      0       0      18        0.0%
+BITSFR17             0      0       0      18        0.0%
+SFR17                0      0       0      18        0.0%
+BITSFR18             0      0       0      19        0.0%
+SFR18                0      0       0      19        0.0%
+DATA                 0      0      28      19        0.0%
+BITSFR19             0      0       0      20        0.0%
+SFR19                0      0       0      20        0.0%
+BITSFR20             0      0       0      21        0.0%
+SFR20                0      0       0      21        0.0%
+BITSFR21             0      0       0      22        0.0%
+SFR21                0      0       0      22        0.0%
+BITSFR22             0      0       0      23        0.0%
+SFR22                0      0       0      23        0.0%
+BITSFR23             0      0       0      24        0.0%
+SFR23                0      0       0      24        0.0%
+BITSFR24             0      0       0      25        0.0%
+SFR24                0      0       0      25        0.0%
+BITSFR25             0      0       0      26        0.0%
+SFR25                0      0       0      26        0.0%
+BITSFR26             0      0       0      27        0.0%
+SFR26                0      0       0      27        0.0%
+BITSFR27             0      0       0      28        0.0%
+SFR27                0      0       0      28        0.0%
+BITSFR28             0      0       0      29        0.0%
+SFR28                0      0       0      29        0.0%
+BITSFR29             0      0       0      30        0.0%
+SFR29                0      0       0      30        0.0%
+BITSFR30             0      0       0      31        0.0%
+SFR30                0      0       0      31        0.0%
+BITSFR31             0      0       0      32        0.0%
+SFR31                0      0       0      32        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.38 build -256452561 
+Symbol Table                                                                                   Tue Jan 31 12:40:44 2017
+
+                      _i 0020                        _j 0022                        _k 0024  
+                      _l 0026                       l84 075D                       l78 07E8  
+          _OS_AddThreads 078F                      l608 0727                      l618 0742  
+                    l652 07C3                      l574 0776                      l654 07DC  
+                    l662 070E                      l576 0784                      l578 0789  
+                    l586 0753                      wreg 0009                     STR_1 0800  
+  __size_of_OS_Scheduler 0031                     _main 06F8                     _tcbs 0028  
+                   fsr0h 0005                     fsr1h 0007                     fsr0l 0004  
+                   indf0 0000                     indf1 0001                     fsr1l 0006  
+                   btemp 007E                     ltemp 007E          __end_of_OS_Wait 0766  
+                   start 0002                     ttemp 007E                     wtemp 007E  
+         ?_OS_AddThreads 0070                    ?_main 0070             _OS_Scheduler 07B9  
+                  _RunPt 007D                    _sema1 007A                    _sema2 007B  
+                  _sema3 007C                    _sema4 0079                    _task1 06E5  
+                  _task2 0712                    _task3 072D                    _task4 06D8  
+                  pclath 000A                    ltemp0 007E                    ltemp1 0082  
+                  ltemp2 0086                    ltemp3 0080                    ttemp0 007E  
+                  ttemp1 0081                    ttemp2 0084                    ttemp3 0087  
+                  ttemp4 007F                    status 0003                    wtemp0 007E  
+                  wtemp1 0080                    wtemp2 0082                    wtemp3 0084  
+                  wtemp4 0086                    wtemp5 0088                    wtemp6 007F  
+     __size_of_OS_Launch 0009       __size_of_OS_Signal 0029          __initialization 07EA  
+           __end_of_main 0712                   ??_main 0079                   ?_task1 0070  
+                 ?_task2 0070                   ?_task3 0070                   ?_task4 0070  
+              ??_OS_Wait 0070          ??_OS_AddThreads 0078        OS_Signal@wBlocked 0070  
+      __end_of_OS_Launch 06D8        __end_of_OS_Signal 078F  __end_of__initialization 07FD  
+         __pcstackCOMMON 0070             __pidataBANK0 06C7            __end_of_task1 06F8  
+          __end_of_task2 072D            __end_of_task3 0748            __end_of_task4 06E5  
+                ??_task1 0073                  ??_task2 0073                  ??_task3 0073  
+                ??_task4 0073               __pbssBANK0 0020               __pnvCOMMON 007D  
+             __pmaintext 06F8                  _OS_Wait 0748                  _Version 0038  
+                __ptext1 07B9                  __ptext2 06CF                  __ptext3 072D  
+                __ptext4 0712                  __ptext5 06E5                  __ptext6 06D8  
+                __ptext7 0748                  __ptext8 0766                  __ptext9 078F  
+                clrloop0 06CA     end_of_initialization 07FD        OS_Scheduler@sleep 0077  
+           __pstringtext 0800                _OS_Launch 06CF                _OS_Signal 0766  
+  __end_of_OS_AddThreads 07B9      start_initialization 07EA               ?_OS_Launch 0070  
+             ?_OS_Signal 0070              __pdataBANK0 0038            ?_OS_Scheduler 0070  
+            __pbssCOMMON 0079                ___latbits 0002                 ?_OS_Wait 0070  
+   OS_Scheduler@PrvRunPt 0076              OS_Signal@pt 0072           ??_OS_Scheduler 0075  
+          OS_Wait@semaPt 0072           __size_of_task1 0013           __size_of_task2 001B  
+         __size_of_task3 001B           __size_of_task4 000D              ??_OS_Launch 0075  
+            ??_OS_Signal 0070                clear_ram0 06C9       OS_AddThreads@func1 0070  
+     OS_AddThreads@func2 0072       OS_AddThreads@func3 0074       OS_AddThreads@func4 0076  
+       __size_of_OS_Wait 001E          OS_Signal@semaPt 0071               OS_Wait@ret 0071  
+          __size_of_main 001A     __end_of_OS_Scheduler 07EA   __size_of_OS_AddThreads 002A  

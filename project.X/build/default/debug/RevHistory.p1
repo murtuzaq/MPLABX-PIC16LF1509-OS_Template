@@ -1,0 +1,9 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"1 RevHistory.c
+[v _Version `*Cuc ~T0 @X0 1 e ]
+[i _Version
+:s 1C
+]
+[; ;RevHistory.c: 1: const char* Version = "Firmware Version 0.0.1";
+[a 1C 70 105 114 109 119 97 114 101 32 86 101 114 115 105 111 110 32 48 46 48 46 49 0 ]
+

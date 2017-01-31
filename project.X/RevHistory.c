@@ -6,6 +6,6 @@ const char* Version = "Firmware Version 0.0.1";
 /* Rev History */
 //
 //
-//initial release;
+//initial project creation;
 //
 #endif
